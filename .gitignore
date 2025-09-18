@@ -147,5 +147,5 @@ jspm_packages/
 ehthumbs.db
 Thumbs.db
 
-# Upload directory (if you want to exclude uploaded files)
-# dist/
+# Upload directory (exclude uploaded files)
+dist/
