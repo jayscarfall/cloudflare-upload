@@ -2,9 +2,11 @@
   "name": "cloudflare-upload",
   "version": "1.0.0",
   "type": "module",
-  "main": "index.js",
+  "main": "upload.js",
   "scripts": {
-    "start": "node index.js"
+    "upload": "node upload.js",
+    "delete": "node delete.js",
+    "clean-upload": "npm run delete && npm run upload"
   },
   "repository": {
     "type": "git",

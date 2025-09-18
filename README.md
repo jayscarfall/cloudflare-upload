@@ -71,14 +71,21 @@ const R2_SECRET_ACCESS_KEY =
 ## Usage
 
 1. Place your files in the `./dist` directory (or change `UPLOAD_DIR` in your `.env` file)
-2. Run the upload script:
+2. Run the script with your desired operation:
 
 ```bash
-# Using npm start (recommended)
-npm start
+# Upload only (no deletion)
+npm run upload
+# or
+node upload.js
 
-# Or directly with node
-node index.js
+# Delete files from R2 bucket only
+npm run delete
+# or
+node delete.js
+
+# Delete existing files and then upload new ones
+npm run clean-upload
 ```
 
 ### Example Output
@@ -147,10 +154,13 @@ CacheControl: "public, max-age=31536000, immutable",
 
 ```
 cloudflare-upload/
-├── index.js          # Main upload script
+├── upload.js         # Upload-only script
+├── delete.js         # Delete-only script
 ├── package.json      # Dependencies and metadata
 ├── .gitignore        # Git ignore rules
 ├── README.md         # This file
+├── .env.example      # Environment variables template
+├── .env              # Your environment variables (not tracked)
 └── dist/             # Upload directory (your files go here)
 ```
 

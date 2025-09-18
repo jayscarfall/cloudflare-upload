@@ -94,6 +94,7 @@ async function run() {
     console.log("No files found to upload.");
     return;
   }
+
   console.log(
     `Found ${files.length} files. Uploading to r2://${R2_BUCKET}/${PREFIX}`
   );
@@ -127,6 +128,7 @@ async function run() {
   console.log(`Done. Success: ${ok}, Failed: ${fail}`);
 }
 
+// Run upload
 run().catch((err) => {
   console.error(err);
   process.exit(1);
